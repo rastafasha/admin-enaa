@@ -16,9 +16,10 @@ declare const gapi: any;
 export class LoginComponent implements OnInit {
   // username = new FormControl();
   name = new FormControl();
+  surname = new FormControl();
   email = new FormControl();
   password = new FormControl();
-  // n_doc = new FormControl();
+  n_doc = new FormControl();
   remember = new FormControl();
 
   loginForm: FormGroup;
@@ -35,8 +36,9 @@ export class LoginComponent implements OnInit {
   public formSumitted = false;
   public registerForm = this.fb.group({
     name: ['', Validators.required],
+    surname: ['', Validators.required],
     email: [ '', [Validators.required] ],
-    // n_doc: ['', Validators.required],
+    n_doc: ['', Validators.required],
     password: ['', Validators.required],
     password2: ['', Validators.required],
     // role_id: [5],
@@ -166,6 +168,15 @@ passwordsIguales(pass1Name: string, pass2Name: string){
 }
 // Registro
 
+
+
+switchRegistrologin(){
+  const container = document.querySelector(".logincontainer");
+  if (container) {
+    container.classList.toggle("sign-up-mode");
+  }
+  window.scrollTo(0, 0);
+}
 
 
 }

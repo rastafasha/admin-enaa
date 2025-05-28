@@ -8,10 +8,9 @@ export class User {
     username: string = "";
     name: string = "";
     surname: string = "";
+    num_doc: string = "";
     email: string = "";
     password?: string = "";
-    first_name: string = "";
-    last_name: string = "";
     token: string = "";
     is_active: number = 0;
     created_at: string = "";

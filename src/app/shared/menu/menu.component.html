@@ -13,11 +13,18 @@
                     </a>
                 </li>
                 <li *ngIf="role === 'SUPERADMIN' || role === 'ADMIN'">
+                    <a routerLink="./pagos" routerLinkActive="active" class="waves-effect waves-dark">
+                        <i class="mdi mdi-note"></i><span class="hide-menu">Pagos </span>
+                    </a>
+                    
+                    <a routerLink="./padres" routerLinkActive="active" class="waves-effect waves-dark">
+                        <i class="mdi mdi-note"></i><span class="hide-menu">Padres </span>
+                    </a>
                     <a routerLink="./usuarios" routerLinkActive="active" class="waves-effect waves-dark">
                         <i class="mdi mdi-note"></i><span class="hide-menu">Usuarios </span>
                     </a>
-                    <a routerLink="./proveedores" routerLinkActive="active" class="waves-effect waves-dark">
-                        <i class="mdi mdi-note"></i><span class="hide-menu">Proveedores </span>
+                    <a routerLink="./settings" routerLinkActive="active" class="waves-effect waves-dark">
+                        <i class="mdi mdi-note"></i><span class="hide-menu">Configuración </span>
                     </a>
                 </li>
                 <!-- <li *ngIf="role === 'SUPERADMIN' || role === 'ADMIN'">
@@ -30,7 +37,7 @@
                         <i class="mdi mdi-animation"></i><span class="hide-menu">Mi Perfil </span>
                     </a>
                 </li>
-                <li><a (click)="logout()"><i class="fa fa-power-off"></i> Logout</a></li>
+                <li><a (click)="logout()"><i class="fa fa-power-off"></i> Cerrar Sesión</a></li>
                 <!-- <li>
                     <a routerLink="video" routerLinkActive="active" class="waves-effect waves-dark">
                         <i class="mdi mdi-animation"></i><span class="hide-menu">Video </span>
